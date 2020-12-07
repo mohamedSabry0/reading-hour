@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @time_block.name %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @time_block.amount %>
+</p>
+
+<%= link_to 'Edit', edit_time_block_path(@time_block) %> |
+<%= link_to 'Back', time_blocks_path %>
