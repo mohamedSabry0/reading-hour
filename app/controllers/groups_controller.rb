@@ -3,7 +3,7 @@ class GroupsController < ApplicationController
   before_action :authenticated?
 
   def index
-    @groups = current_user.groups
+    @groups = Group.all
   end
 
   def show; end
@@ -47,7 +47,6 @@ class GroupsController < ApplicationController
 
   def set_group
     @group = Group.find(params[:id])
-    redirect_to current_user, notice: 'Access Forbidden' unless current_user.groups.include?(@group)
   end
 
   def group_params
