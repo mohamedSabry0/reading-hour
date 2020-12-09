@@ -1,5 +1,6 @@
 class TimeBlocksController < ApplicationController
   before_action :set_time_block, only: %i[show edit update destroy]
+  before_action :authenticated?
 
   def index
     @time_blocks = current_user.time_blocks
