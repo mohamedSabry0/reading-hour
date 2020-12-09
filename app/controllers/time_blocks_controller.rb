@@ -47,6 +47,7 @@ class TimeBlocksController < ApplicationController
 
   def set_time_block
     @time_block = TimeBlock.find(params[:id])
+    redirect_to current_user, notice: 'Access Forbidden' unless current_user.time_blocks.include?(@time_block)
   end
 
   def time_block_params

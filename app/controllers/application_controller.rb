@@ -1,10 +1,8 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user, :authenticated?
-  
+
   def authenticated?
-    if current_user.nil?
-      redirect_to login_path, notice: 'You must login or signup before proceeding'
-    end
+    redirect_to login_path, notice: 'You must login or signup before proceeding' if current_user.nil?
   end
 
   def current_user

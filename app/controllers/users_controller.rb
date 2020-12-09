@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
 
+  def profile
+    redirect_to current_user
+  end
+
   def show; end
 
   def new
@@ -43,6 +47,7 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
+    redirect_to current_user, notice: 'Access Forbidden' unless @user == current_user
   end
 
   def user_params

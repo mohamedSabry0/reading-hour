@@ -1,5 +1,4 @@
 require 'rails_helper'
 
-RSpec.describe "Groupings", type: :request do
-
+RSpec.describe 'Groupings', type: :request do
 end

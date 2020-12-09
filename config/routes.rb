@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root  to: 'groups#index'
+  root  to: 'users#profile'
   resources :groups
   resources :time_blocks
   resources :users, except: [:index]
