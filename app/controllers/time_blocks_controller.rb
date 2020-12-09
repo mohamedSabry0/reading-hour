@@ -2,7 +2,7 @@ class TimeBlocksController < ApplicationController
   before_action :set_time_block, only: %i[show edit update destroy]
 
   def index
-    @time_blocks = TimeBlock.all
+    @time_blocks = current_user.time_blocks
   end
 
   def show; end

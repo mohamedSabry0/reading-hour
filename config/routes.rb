@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   resources :groups
   resources :time_blocks
-  resources :users
+  resources :users, except: [:index]
   resources :sessions, only: %i[new create destroy]
+  resources :groupings, only: %i[create destroy]
+
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
