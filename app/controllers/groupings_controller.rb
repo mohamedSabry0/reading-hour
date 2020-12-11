@@ -1,7 +1,7 @@
 class GroupingsController < ApplicationController
   def create
     @time_block = TimeBlock.find(params[:time_block_id])
-    @time_blocks.groups.push(groups.find(params[:group_id]))
+    @time_block.groups.push(groups.find(params[:group_id]))
 
     if @time_block.save
       redirect_to time_block_path(@time_block), notice: 'added group'

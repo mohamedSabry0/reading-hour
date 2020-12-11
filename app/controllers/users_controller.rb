@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
-
+  # TODO: use only rest methods
   def profile
     redirect_to current_user
   end

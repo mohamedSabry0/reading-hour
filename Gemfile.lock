@@ -186,7 +186,7 @@ GEM
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
-    sassc (2.4.0)
+    sassc (2.1.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
       railties (>= 4.0.0)
@@ -256,7 +256,9 @@ DEPENDENCIES
   rails-controller-testing
   rspec-rails (~> 4.0, >= 4.0.1)
   rubocop (~> 0.81)
-  sass-rails (>= 6)
+  sass-rails (~> 6.0)
+  sassc (~> 2.1.0)
+  sassc-rails (~> 2.1, >= 2.1.2)
   selenium-webdriver
   shoulda-matchers (= 4.0.0.rc1)
   spring
