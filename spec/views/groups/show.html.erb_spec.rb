@@ -4,13 +4,13 @@ RSpec.describe 'groups/show', type: :view do
   before(:each) do
     @group = assign(:group, Group.create!(
                               name: 'Name',
-                              icon: 'Icon Link'
+                              icon: 'Icon'
                             ))
   end
 
   it 'renders attributes in <p>' do
     render
     expect(rendered).to match(/Name/)
-    expect(rendered).to match(/Icon Link/)
+    expect(rendered).to match(/Icon/)
   end
 end

@@ -4,4 +4,5 @@ class Group < ApplicationRecord
   belongs_to :user
   has_many :groupings
   has_many :time_blocks, through: :groupings
+
 end

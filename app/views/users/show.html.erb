@@ -3,7 +3,8 @@
   <%= @user.username %>
 </p>
 
-<%= link_to 'My Groups', groups_path%><br />
-<%= link_to 'My Reading Zones', time_blocks_path%><br />
+<%= link_to 'Groups', groups_path%><br />
+<%= link_to 'non-grouped spans', nongrouped_path%><br />
+<%= link_to 'My Reading spans', time_blocks_path%><br />
 
 <%= link_to 'Edit', edit_user_path(@user) %>

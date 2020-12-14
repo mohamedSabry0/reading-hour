@@ -8,5 +8,11 @@
   <%= @time_block.amount %>
 </p>
 
+<% @time_block.groups.each do |group|%>
+  <p>
+    <strong><%= group.name %></strong>
+  </p>
+<%end%>
+
 <%= link_to 'Edit', edit_time_block_path(@time_block) %> |
 <%= link_to 'Back', time_blocks_path %>

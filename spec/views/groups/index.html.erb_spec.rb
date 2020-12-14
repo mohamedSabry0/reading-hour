@@ -5,11 +5,11 @@ RSpec.describe 'groups/index', type: :view do
     assign(:groups, [
              Group.create!(
                name: 'Name',
-               icon: 'Icon Link'
+               icon: 'Icon'
              ),
              Group.create!(
                name: 'Name',
-               icon: 'Icon Link'
+               icon: 'Icon'
              )
            ])
   end
@@ -17,6 +17,6 @@ RSpec.describe 'groups/index', type: :view do
   it 'renders a list of groups' do
     render
     assert_select 'tr>td', text: 'Name'.to_s, count: 2
-    assert_select 'tr>td', text: 'Icon Link'.to_s, count: 2
+    assert_select 'tr>td', text: 'Icon'.to_s, count: 2
   end
 end

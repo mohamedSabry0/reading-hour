@@ -12,13 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name %> <br />
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :amount %>
+    <%= form.label :amount %> <br />
     <%= form.number_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :group_list %> <br />
+    <%= form.text_field :group_list %>
+  </div>
+
+  <div>
+    <h3>Available Groups</h3>
+    <% @groups.each do |group|%>
+      <p><%=group.name%></p>
+    <% end %>
   </div>
 
   <div class="actions">

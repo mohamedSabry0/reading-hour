@@ -10,9 +10,12 @@ class TimeBlocksController < ApplicationController
 
   def new
     @time_block = current_user.time_blocks.build
+    @groups = Group.all
   end
 
-  def edit; end
+  def edit
+    @groups = Group.all
+  end
 
   def create
     @time_block = current_user.time_blocks.create!(time_block_params)
@@ -51,6 +54,6 @@ class TimeBlocksController < ApplicationController
   end
 
   def time_block_params
-    params.require(:time_block).permit(:name, :amount)
+    params.require(:time_block).permit(:name, :amount, :group_list)
   end
 end
