@@ -16,11 +16,11 @@ RSpec.describe '/users', type: :request do
   # User. As you add validations to User, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) do
-    { username: 'abc'}
+    { username: 'abc' }
   end
 
   let(:invalid_attributes) do
-    { username: 'd'}
+    { username: 'd' }
   end
 
   describe 'GET /index' do
