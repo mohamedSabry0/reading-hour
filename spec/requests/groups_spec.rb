@@ -15,12 +15,15 @@ require 'rails_helper'
 RSpec.describe '/groups', type: :request do
   # Group. As you add validations to Group, be sure to
   # adjust the attributes here as well.
+  user = User.create!(username: 'one')
   let(:valid_attributes) do
-    skip('Add a hash of attributes valid for your model')
+    { name: 'abc',
+      icon: Rack::Test::UploadedFile.new('app/assets/images/iconfinder_Development_5355692.png', 'image/png'),
+      user_id: user.id }
   end
 
   let(:invalid_attributes) do
-    skip('Add a hash of attributes invalid for your model')
+    { name: nil, icon: 'weq', user_id: user.id }
   end
 
   describe 'GET /index' do
@@ -41,7 +44,7 @@ RSpec.describe '/groups', type: :request do
 
   describe 'GET /new' do
     it 'renders a successful response' do
-      get new_group_url
+      get new_group_path
       expect(response).to be_successful
     end
   end

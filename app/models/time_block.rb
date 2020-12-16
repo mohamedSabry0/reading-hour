@@ -2,9 +2,8 @@ class TimeBlock < ApplicationRecord
   validates :name, presence: true, length: { in: 3..15 }
   validates :amount, presence: true
   belongs_to :author, class_name: 'User'
-  has_many :groupings
+  has_many :groupings, dependent: :destroy
   has_many :groups, through: :groupings
-
 
   def self.non_grouped
     left_outer_joins(:groups).where('group_id is null')

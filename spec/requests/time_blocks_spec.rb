@@ -15,12 +15,16 @@ require 'rails_helper'
 RSpec.describe '/time_blocks', type: :request do
   # TimeBlock. As you add validations to TimeBlock, be sure to
   # adjust the attributes here as well.
+  let(:user) { User.create! username: 'one' }
+  let(:group) { Group.create! name: 'abc',
+    icon: Rack::Test::UploadedFile.new('app/assets/images/iconfinder_Development_5355692.png', 'image/png'),
+    user_id: user.id }
   let(:valid_attributes) do
-    skip('Add a hash of attributes valid for your model')
+    { name: 'fwf', amount: 2, group_list: 'abc', author_id: user.id}
   end
 
   let(:invalid_attributes) do
-    skip('Add a hash of attributes invalid for your model')
+    {name: nil, amount: 2, group_list: group}
   end
 
   describe 'GET /index' do

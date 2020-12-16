@@ -7,11 +7,11 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @time_blocks = @group.time_blocks
+    @time_blocks = @group.time_blocks.order('created_at DESC')
   end
 
   def new
-    @group = current_user.groups.build
+    @group = Group.new
   end
 
   def edit; end
@@ -20,7 +20,7 @@ class GroupsController < ApplicationController
     @group = current_user.groups.create!(group_params)
 
     respond_to do |format|
-      if @group.save
+      if @group.valid?
         format.html { redirect_to @group, notice: 'Group was successfully created.' }
       else
         format.html { render :new }

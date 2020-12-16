@@ -3,7 +3,7 @@ class TimeBlocksController < ApplicationController
   before_action :authenticated?
 
   def index
-    @time_blocks = current_user.time_blocks
+    @time_blocks = current_user.time_blocks.order('created_at DESC')
   end
 
   def show; end
@@ -49,7 +49,7 @@ class TimeBlocksController < ApplicationController
   private
 
   def set_time_block
-    @time_block = TimeBlock.find(params[:id])
+    @time_block = TimeBlock.includes(:groups).find(params[:id])
     redirect_to current_user, notice: 'Access Forbidden' unless current_user.time_blocks.include?(@time_block)
   end
 
