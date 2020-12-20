@@ -1,10 +1,20 @@
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
-
-<%= link_to 'Groups', groups_path%><br />
-<%= link_to 'non-grouped spans', nongrouped_path%><br />
-<%= link_to 'My Reading spans', time_blocks_path%><br />
-
-<%= link_to 'Edit', edit_user_path(@user) %>
+<div class="container bg-gradient-blue white">
+  <div>
+    <p class='big-font'>Hello <%= @user.username %></p>
+  </div>
+  <div class='box box-pr'>
+    <%= link_to 'All Groups', groups_path, class:'link big-font'%>
+  </div>
+  <div class='box box-pr'>
+    <%= link_to 'non-grouped spans', nongrouped_path, class:'link big-font'%>
+  </div>
+  <div class='box box-pr'>
+    <%= link_to 'My Reading spans', time_blocks_path, class:'link big-font'%>
+  </div>
+  <div class='box box-pr'>
+    <%= link_to 'Edit', edit_user_path(@user), class:'link big-font'%>
+  </div>
+  <div class='box box-pr'>
+    <%= link_to 'Log Out', logout_path, class:'link big-font'%>
+  </div>
+</div>

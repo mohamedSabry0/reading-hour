@@ -9,11 +9,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <p id=”alert”><%= alert %></p>
-    <p id=”notice”><%= notice %></p>
-
-    <%= logged_in_links %>
-    <%= yield %>
+  <body class='m-0'>
+    <p id="alert" class=<%=alert_notice%> ><%= alert %></p>
+    <p id="notice" class=<%=alert_notice%> ><%= notice %></p>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
