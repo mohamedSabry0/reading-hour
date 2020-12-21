@@ -1,4 +1,4 @@
 require 'rails_helper'
 
-RSpec.feature "ReadingHourrspecs", type: :feature do
+RSpec.feature 'ReadingHourrspecs', type: :feature do
 end
