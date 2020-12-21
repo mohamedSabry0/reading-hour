@@ -12,9 +12,9 @@
     <%= link_to 'My Reading spans', time_blocks_path, class:'link big-font'%>
   </div>
   <div class='box box-pr'>
-    <%= link_to 'Edit', edit_user_path(@user), class:'link big-font'%>
+    <%= link_to 'Edit Profile', edit_user_registration_path(@user), class:'link big-font'%>
   </div>
   <div class='box box-pr'>
-    <%= link_to 'Log Out', logout_path, class:'link big-font'%>
+    <%= link_to 'Log Out', destroy_user_session_path, class:'link big-font'%>
   </div>
 </div>

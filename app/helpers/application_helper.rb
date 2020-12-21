@@ -10,7 +10,7 @@ module ApplicationHelper
   def logged_in_nav
     return unless current_user
 
-    link_to('Log Out', logout_path)\
+    link_to('Log Out', destroy_user_session_path)\
       .concat(' ')
       .concat(link_to('Profile', user_path(current_user)))
   end
