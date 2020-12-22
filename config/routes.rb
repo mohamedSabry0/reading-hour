@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   root  to: 'time_blocks#index'
   resources :groups
   resources :time_blocks
-  devise_for :users
+  devise_for :users, :controllers => {:sessions => "devise/sessions"}
+  
   resources :users, only: [:show]
-  resources :sessions, only: %i[new create destroy]
   resources :groupings, only: %i[create destroy]
 
   get 'nongrouped', to: 'time_blocks#nongrouped', as: 'nongrouped'

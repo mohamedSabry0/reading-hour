@@ -15,6 +15,6 @@
     <%= link_to 'Edit Profile', edit_user_registration_path(@user), class:'link big-font'%>
   </div>
   <div class='box box-pr'>
-    <%= link_to 'Log Out', destroy_user_session_path, class:'link big-font'%>
+    <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class:'link big-font'%>
   </div>
 </div>

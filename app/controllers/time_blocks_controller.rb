@@ -1,7 +1,7 @@
 class TimeBlocksController < ApplicationController
   before_action :set_time_block, only: %i[show edit update destroy]
   before_action :authenticate_user!
-  
+
   def index
     @time_blocks = current_user.time_blocks.order('created_at DESC')
   end
