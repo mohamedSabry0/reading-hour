@@ -1,0 +1,64 @@
+<%= stripe_javascript_tag %>
+<div>
+  <h1>List of plans</h1>
+  <%= form_tag({:controller => "subscriptions", :action => "submit" }, {:id => 'subscription-details'}) do %>
+    <input id="order-type" name="subscriptions[payment_gateway]" type="hidden" value="stripe"></input>
+    <div class="form_row">
+      <h4>Charges/Payments</h4>
+      <% @plan_purchases.each do |plan| %>
+        <div data-charges-and-payments-section="<%= true %>">
+          <%= radio_button_tag 'subscriptions[subscription_plan_id]', plan.id, @plan_purchases.first == plan %>
+          <span id="radioButtonName<%= plan.id %>"><%=plan.name%></span>
+          <span data-price="<%= plan.price_cents %>" id="radioButtonPrice<%= plan.id %>"><%= humanized_money_with_symbol plan.price%></span>
+        </div>
+        <br/>
+      <% end %>
+    </div>
+    <hr/>
+    <h1>Payment Method</h1>
+    <div class="form_row">
+      <div>
+        <%= radio_button_tag 'payment-selection', 'stripe', true, onclick: "changeTab();" %>
+        <span>Stripe</span>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="paymentSelectionTab active" id="tab-stripe">
+      <div id="card-element"></div>
+      <div id="card-errors" role="alert"></div>
+      <br/>
+      <br/>
+      <%= submit_tag "Buy it!", id: "submit-stripe" %>
+    </div>
+    <div class="paymentSelectionTab" id="tab-paypal">
+      <div id="submit-paypal"></div>
+    </div>
+    <br/>
+    <br/>
+    <hr/>
+  <% end %>
+</div>
+<script>
+  
+  function changeTab() {
+    var newActiveTabID = $('input[name="payment-selection"]:checked').val();
+    $('.paymentSelectionTab').removeClass('active');
+    $('#tab-' + newActiveTabID).addClass('active');
+  }
+
+
+</script>
+<style>
+  
+  #card-element {
+    width:500px;
+  }
+  .paymentSelectionTab {
+    display: none;
+  }
+  .paymentSelectionTab.active {
+    display: block !important;
+  }
+
+</style>

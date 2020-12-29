@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :groupings, only: %i[create destroy]
 
   get 'nongrouped', to: 'time_blocks#nongrouped', as: 'nongrouped'
+
+  resources :subscriptions, only: [:index]
+  post '/subscription/submit', to: 'subscriptions#submit'
   # get 'signup', to: 'users#new', as: 'signup'
   # get 'login', to: 'sessions#new', as: 'login'
   # get 'logout', to: 'sessions#destroy', as: 'logout'
