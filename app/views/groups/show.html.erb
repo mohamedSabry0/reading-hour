@@ -5,7 +5,7 @@
 
 <p>
   <strong>Icon:</strong>
-  <%= image_tag @group.icon, style: "width: 200px; display:block" %>
+  <%= group_icon(@group) %>
 </p>
 
 <h2>Time Blocks</h2>
@@ -28,7 +28,7 @@
         <td><%= time_block.name %></td>
         <td><%= time_block.amount %></td>
         <td><%= time_block.created_at %></td>
-        <td><%= time_block.groups.first %></td>
+        <td><%= group_icon(time_block) %></td>
         <td><%= link_to 'Show', time_block %></td>
         <td><%= link_to 'Edit', edit_time_block_path(time_block) %></td>
         <td><%= link_to 'Destroy', time_block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
