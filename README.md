@@ -1,24 +1,120 @@
-# README
+# Reading Books Scheduler App With Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents
 
-Things you may want to cover:
+- [Deployment](#Deployment)
+- [User Scenarios](#user-scenarios)
+- [Built With](#built-with)
+- [Example applications](#example-applications)
+- [Getting started](#getting-started)
+	- [Prerequisites](#prerequisites)
+	- [Setup](#setup)
+	- [Usage](#usage)
+	- [Run Tests](#run-tests)
+- [Author](#author)
+- [Contributing](#contributing)
+- [Show Your Support](#show-your-support)
+- [License](#license)
+## Deployment
+the app is deployed on heroku and the link is:
 
-* Ruby version
+https://obscure-plateau-96513.herokuapp.com/
 
-* System dependencies
+## User Scenarios
+Following MVP version of the app, these are the basic user scenarios:
 
-* Configuration
+- Extra feature for login: you can use either username or email along with the password (devise is used for authentication)
+- The user is presented with a profile page that includes links to:
+    - "All my time spans".
+    - "All my nongrouped time spans".
+    - "All groups".
+- When user opens "All my time spans" page:
+    - Total amount is displayed at the top.
+    - A list of all time blocks created by logged-in user is displayed (sorted by most recent).
+    - Each time block displays its name, amount and date, and an icon of the first group it has been assigned to.
+    - An action button "Add new" is displayed.
+- When user opens "All my nongrouped time spans" page:
+    - A list of all time blocks that are created by a logged-in user but not assigned to any group is displayed (sorted by most recent).
+    - The design of the page is similar to the "All my time spans".
+- When user opens "All groups" page:
+    - A list of all groups is displayed in alphabetical order.
+    - Each group displays its icon, name and creation date.
+    - Each group is clickable and opens "Group time spans" page.
+    - An action button "Create new" is displayed.
+    - The design of the page is similar to the "User profile page"
+- When user opens the "Group time spans" page:
+    - A list of all transactions that belong to that group is displayed.
+    - The design of the page is similar to the "All my time spans". Besides the information that appears in All my time spans page, each time span displays the name of the author of time span.
+- When user opens "Create new group" or "Add new time span" page:
+    - A form with all necessary fields is displayed.
 
-* Database creation
+- The guidelines of the given design, including:
+    - Colors
+    - typographies: font face, size and weight (use similar ones to the design)
+    - layout: composition and space between elements
+## Built With
 
-* Database initialization
+- Ruby v2.7.0
+- Ruby on Rails v6.0.3.4
+## Getting Started
 
-* How to run the test suite
+To get a local copy up and running follow these simple example steps.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Prerequisites
 
-* Deployment instructions
+- Ruby: 2.7.0
+- Rails: 6.0.3.4
+- Postgres: >=12.5
 
-* ...
+### Setup
+
+Install gems with:
+
+```
+bundle install
+```
+
+Setup database with:
+
+```
+   rails db:create
+   rails db:migrate
+```
+
+### Usage
+
+Start server with:
+
+```
+    rails server
+```
+
+Open http://localhost:3000/ in your browser.
+
+### Run tests
+
+```
+    rpsec --format documentation
+```
+## Author
+
+👤 Mohamed Sabry
+
+- Github: [@mohamedSabry0](https://github.com/mohamedSabry0)
+- Twitter: [twitter profile](https://twitter.com/mohsmh0)
+- Linkedin: [linkedin profile](https://www.linkedin.com/in/mohamed-sabry0/)
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT]() licensed.
