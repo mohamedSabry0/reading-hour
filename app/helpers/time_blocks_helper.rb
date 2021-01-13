@@ -1,13 +1,9 @@
 module TimeBlocksHelper
-  def group_icon(object)
-    if object.class == TimeBlock && (object.groups.first.nil? || !object.groups.first.icon.attached?)
+  def main_group_icon(time_block)
+    if time_block.groups.first.nil? || !time_block.groups.first.icon.attached?
       'no icon'
-    elsif object.class == TimeBlock
-      image_tag object.groups.first.icon, class: 'icon'
-    elsif object.class == Group && (object.nil? || !object.icon.attached?)
-      'no icon'
-    elsif object.class == Group
-      image_tag object.icon, class: 'icon'
+    else
+      image_tag time_block.groups.first.icon, class: 'icon'
     end
   end
 end

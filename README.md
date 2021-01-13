@@ -54,17 +54,17 @@ Following MVP version of the app, these are the basic user scenarios:
     - layout: composition and space between elements
 ## Built With
 
-- Ruby v2.7.0
-- Ruby on Rails v6.0.3.4
+Ruby v2.7.0  
+Ruby on Rails v6.0.3.4
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- Ruby: 2.7.0
-- Rails: 6.0.3.4
-- Postgres: >=12.5
+Ruby: 2.7.0  
+Rails: 6.0.3.4  
+Postgres: >=12.5
 
 ### Setup
 
