@@ -104,6 +104,8 @@ Open http://localhost:3000/ in your browser.
 - Twitter: [twitter profile](https://twitter.com/mohsmh0)
 - Linkedin: [linkedin profile](https://www.linkedin.com/in/mohamed-sabry0/)
 
+## Acknowledgments
+- [autocomplete select from list](https://medium.com/@sherzelsmith/add-a-filtering-multiple-tag-system-with-autocomplete-to-your-rails-model-in-rails-5-1bf88cd53e9)
 
 ## 🤝 Contributing
 
