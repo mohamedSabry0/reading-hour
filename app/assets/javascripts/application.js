@@ -2,6 +2,7 @@
 //= require jquery_ujs
 //= require popper
 //= require tether
+//= require chosen
 //= require bootstrap-sprockets
 //= require turbolinks
-//= requre_tree .
+//= require_tree .

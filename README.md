@@ -106,6 +106,7 @@ Open http://localhost:3000/ in your browser.
 
 ## Acknowledgments
 - [autocomplete select from list](https://medium.com/@sherzelsmith/add-a-filtering-multiple-tag-system-with-autocomplete-to-your-rails-model-in-rails-5-1bf88cd53e9)
+https://stackoverflow.com/a/30782337/6010915
 
 ## 🤝 Contributing
 

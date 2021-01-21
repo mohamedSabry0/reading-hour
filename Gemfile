@@ -30,10 +30,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # add devise for proper authentication
 gem 'devise'
 # for frontend and select groups
+gem 'jquery-rails'
 gem 'popper_js'
 gem 'bootstrap'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>=1.3.3'
+  gem 'rails-assets-chosen'
 end
 gem 'simple_form'
 
