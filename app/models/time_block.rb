@@ -10,6 +10,7 @@ class TimeBlock < ApplicationRecord
   end
 
   def group_list
+    # &:name works like {|x| x.name} and was changed by rubocop
     groups.collect(&:name).join(', ')
   end
 
@@ -18,18 +19,4 @@ class TimeBlock < ApplicationRecord
     found_groups = group_names.collect { |name| Group.find_by_name(name) }
     self.groups = found_groups
   end
-  require 'csv'
- 
-  
-  def export_csv(table)
-    file = "#{Rails.root}/public/#{table.first.author.name}_time_blocks.csv"
-    table = table;0
-    CSV.open( file, 'w' ) do |writer|
-      writer << table.first.attributes.map { |a,v| a }
-      table.each do |s|
-        writer << s.attributes.map { |a,v| v }
-      end
-    end
-  end
-  
 end

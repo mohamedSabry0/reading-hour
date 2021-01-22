@@ -30,16 +30,16 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # add devise for proper authentication
 gem 'devise'
 # for frontend and select groups
+gem 'bootstrap'
 gem 'jquery-rails'
 gem 'popper_js'
-gem 'bootstrap'
 source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>=1.3.3'
   gem 'rails-assets-chosen'
+  gem 'rails-assets-tether', '>=1.3.3'
 end
 gem 'simple_form'
 
-group :development, :test do  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+group :development, :test do # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'bullet', '~> 6.1.0'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
@@ -64,6 +64,7 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'rails-controller-testing'
   gem 'shoulda-matchers', '4.0.0.rc1'
+  gem 'simplecov', require: false
   gem 'webdrivers'
 end
 
