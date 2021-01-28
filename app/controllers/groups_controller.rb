@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
   def edit; end
 
   def create
-    @group = current_user.groups.create!(group_params)
+    @group = current_user.groups.create(group_params)
 
     respond_to do |format|
       if @group.valid?

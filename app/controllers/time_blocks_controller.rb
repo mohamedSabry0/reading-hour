@@ -6,7 +6,9 @@ class TimeBlocksController < ApplicationController
     @time_blocks = current_user.time_blocks.order('created_at DESC')
   end
 
-  def show; end
+  def show
+    @groups = @time_block.groups.includes(icon_attachment: :blob)
+  end
 
   def new
     @time_block = current_user.time_blocks.build
@@ -15,7 +17,7 @@ class TimeBlocksController < ApplicationController
   def edit; end
 
   def create
-    @time_block = current_user.time_blocks.create!(time_block_params)
+    @time_block = current_user.time_blocks.create(time_block_params)
 
     respond_to do |format|
       if @time_block.save

@@ -32,6 +32,7 @@ gem 'devise'
 # for frontend and select groups
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 gem 'popper_js'
 source 'https://rails-assets.org' do
   gem 'rails-assets-chosen'

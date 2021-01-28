@@ -9,10 +9,12 @@
 </p>
 
 <strong>Groups:</strong>
-<% @time_block.groups.each do |group|%>
+<% @groups.each do |group|%>
   <p>
     <strong><%= group.name %></strong>
+      <%= group_icon(group) %>
   </p>
+
 <%end%>
 
 <%= link_to 'Edit', edit_time_block_path(@time_block) %> |

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {:sessions => "devise/sessions"}
   
   resources :users, only: [:show]
-  resources :groupings, only: %i[create destroy]
+  # resources :groupings, only: %i[create destroy]
 
   get 'nongrouped', to: 'time_blocks#nongrouped', as: 'nongrouped'
   

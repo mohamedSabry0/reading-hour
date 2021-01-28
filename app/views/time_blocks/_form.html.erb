@@ -3,13 +3,13 @@
   
   <%= f.input :name %> 
   <%= f.input :amount %>
-  <%= f.input :group_ids, as: :select, collection: Group.order(:name), label_method: :name, input_html: {multiple: true} %>
+  <%= f.input :group_ids, as: :select, collection: Group.all, label_method: :name, input_html: {multiple: true} %>
 
-  <%= f.submit %>
+  <%= f.submit 'Create/Update Time Block'%>
   
 <% end %>
 <script>
-  $(document).on('ready page:load', function(){
+  $(window).load( function(){
     $('#time_block_group_ids').chosen({
       allow_single_deselect:true,
       width: '100%'
