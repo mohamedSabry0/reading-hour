@@ -92,9 +92,12 @@ Start server with:
 Open http://localhost:3000/ in your browser.
 
 ### Run tests
-
 ```
-    rpsec --format documentation
+    rspec --format doc
+```
+or if you want it to open an instance of the browser you can use the following instead:
+```
+    GUI=true rpsec --format doc
 ```
 if you get `password authentication failed for user "postgres"`
 then, you will need to change the password in `config/database.yml` on line 62 to your own `postgres` user's password
