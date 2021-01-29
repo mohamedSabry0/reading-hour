@@ -62,7 +62,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.7.0  
+Ruby: 2.7.2 
 Rails: 6.0.3.4  
 Postgres: >=12.5
 
@@ -96,6 +96,8 @@ Open http://localhost:3000/ in your browser.
 ```
     rpsec --format documentation
 ```
+if you get `password authentication failed for user "postgres"`
+then, you will need to change the password in `config/database.yml` on line 62 to your own `postgres` user's password
 ## Author
 
 👤 Mohamed Sabry
