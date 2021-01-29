@@ -1,11 +1,11 @@
 env:
-  RUBY_VERSION: 2.7.0
+  RUBY_VERSION: 2.6
   POSTGRES_USER: postgres
-  POSTGRES_PASSWORD: ""
+  POSTGRES_PASSWORD: postgres
   POSTGRES_DB: postgres
 
 name: Rails tests
-on: [push,pull_request]
+on: [push]
 jobs:
   rspec-test:
     name: RSpec
@@ -29,6 +29,8 @@ jobs:
         run: |
           gem install bundler
           bundler install
+      - name: Install rspec
+        run: gem install rspec
       - name: Create database
         run: |
           bundler exec rails db:create RAILS_ENV=test
