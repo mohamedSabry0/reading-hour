@@ -87,9 +87,9 @@ a.btn {
   color: black;
   border-color: black;
 
+  &-light,
   &-light:hover,
-  &-light:visited,
-  &-light {
+  &-light:visited {
     border: white solid 1px;
     border-radius: 8px;
     background: transparent;
