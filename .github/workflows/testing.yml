@@ -1,7 +1,5 @@
 env:
   RUBY_VERSION: 2.7
-  POSTGRES_USER: postgres
-  POSTGRES_PASSWORD: postgres
   POSTGRES_DB: postgres
 
 name: Rails tests
@@ -15,20 +13,14 @@ jobs:
         image: postgres:latest
         ports:
         - 5432:5432
-        env:
-          POSTGRES_USER: ${{ env.POSTGRES_USER }}
-          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-ruby@v1
         with:
+          bundler-cache: true
           ruby-version: ${{ env.RUBY_VERSION }}
       - name: Install postgres client
         run: sudo apt-get install libpq-dev
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundler install
       - name: Install rspec
         run: gem install rspec
       - name: Create database
