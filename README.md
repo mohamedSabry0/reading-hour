@@ -54,7 +54,7 @@ Following MVP version of the app, these are the basic user scenarios:
     - layout: composition and space between elements
 ## Built With
 
-Ruby v2.7.0  
+Ruby v2.7.2  
 Ruby on Rails v6.0.3.4
 ## Getting Started
 
