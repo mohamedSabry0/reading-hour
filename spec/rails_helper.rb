@@ -41,7 +41,7 @@ RSpec.configure do |config|
   end
 end
 
-Capybara.default_driver = :selenium
+Capybara.default_driver = (ENV['HEADLESS']=='true' ? :selenium_headless : :selenium)
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
