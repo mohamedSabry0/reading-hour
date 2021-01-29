@@ -9,7 +9,7 @@ on: [push]
 jobs:
   rspec-test:
     name: RSpec
-    runs-on: ubuntu-20.04.1
+    runs-on: ubuntu-latest
     services:
       postgres:
         image: postgres:latest
