@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root  to: 'time_blocks#index'
+  root  to: 'users#show'
   resources :groups
   resources :time_blocks
   devise_for :users, :controllers => {:sessions => "devise/sessions"}

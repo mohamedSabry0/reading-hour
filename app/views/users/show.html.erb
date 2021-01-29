@@ -2,19 +2,10 @@
   <div>
     <p class='big-font'>Hello <%= @user.username %></p>
   </div>
-  <div class='box box-pr'>
-    <%= link_to 'All Groups', groups_path, class:'link big-font'%>
-  </div>
-  <div class='box box-pr'>
-    <%= link_to 'non-grouped spans', nongrouped_path, class:'link big-font'%>
-  </div>
-  <div class='box box-pr'>
-    <%= link_to 'My Reading spans', time_blocks_path, class:'link big-font'%>
-  </div>
-  <div class='box box-pr'>
-    <%= link_to 'Edit Profile', edit_user_registration_path(@user), class:'link big-font'%>
-  </div>
-  <div class='box box-pr'>
-    <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class:'link big-font'%>
+  <div class='d-flex flex-column text-center'>
+    <%= link_to 'All Groups', groups_path, class:'btn-light big-font mb-1 p-1'%>
+    <%= link_to 'non-grouped spans', nongrouped_path, class:'btn-light big-font mb-1 p-1'%>
+    <%= link_to 'My Reading spans', time_blocks_path, class:'btn-light big-font mb-1 p-1'%>
+    <%= link_to 'Edit Profile', edit_user_registration_path(@user), class:'btn-light big-font p-1'%>
   </div>
 </div>

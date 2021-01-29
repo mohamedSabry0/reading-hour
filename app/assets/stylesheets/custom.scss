@@ -1,5 +1,11 @@
 @import "bootstrap";
 
+.btn-primary {
+  color: white;
+  background-color: #006adb;
+  border-color: #006adb;
+}
+
 abbr {
   color: rgb(189, 1, 1);
 }
@@ -77,16 +83,25 @@ abbr {
   line-height: normal;
 }
 
-a.link {
-  &:visited {
+a.btn {
+  color: black;
+  border-color: black;
+
+  &-light:hover,
+  &-light:visited,
+  &-light {
+    border: white solid 1px;
+    border-radius: 8px;
+    background: transparent;
+    text-decoration: none;
     color: white;
   }
 
-  &:hover {
-    background: #71adf1;
+  &:hover,
+  &-light:hover {
+    background: #0003;
   }
 
-  color: white;
   text-decoration: none;
 }
 

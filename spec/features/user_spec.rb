@@ -6,7 +6,7 @@ RSpec.feature 'Users', type: :feature do
       visit 'users/sign_up'
       fill_in 'Username', with: 'per'
       fill_in 'Email', with: 'per@e.com'
-      fill_in 'Password', with: '123123'
+      fill_in 'user_password', with: '123123'
       fill_in 'Password confirmation', with: '123123'
       click_on 'Sign up'
       expect(page).to have_content('Welcome! You have signed up successfully.')
@@ -15,7 +15,7 @@ RSpec.feature 'Users', type: :feature do
       visit 'users/sign_up'
       fill_in 'Username', with: nil
       fill_in 'Email', with: nil
-      fill_in 'Password', with: nil
+      fill_in 'user_password', with: nil
       fill_in 'Password confirmation', with: nil
       click_on 'Sign up'
 
@@ -29,7 +29,7 @@ RSpec.feature 'Users', type: :feature do
     visit 'users/sign_up'
     fill_in 'Username', with: 'per2'
     fill_in 'Email', with: 'per2@e.com'
-    fill_in 'Password', with: '123123'
+    fill_in 'user_password', with: '123123'
     fill_in 'Password confirmation', with: '123123'
     click_on 'Sign up'
     click_on 'Log Out'
@@ -38,21 +38,21 @@ RSpec.feature 'Users', type: :feature do
     it "can't login with invalid data" do
       visit 'users/sign_in'
       fill_in 'Login', with: 'nil'
-      fill_in 'Password', with: 'nil'
+      fill_in 'user_password', with: 'nil'
       click_on 'Log in'
       expect(page).to have_content('Invalid Login or password')
     end
     it 'can login with username' do
       visit 'users/sign_in'
       fill_in 'Login', with: 'per2'
-      fill_in 'Password', with: '123123'
+      fill_in 'user_password', with: '123123'
       click_on 'Log in'
       expect(page).to have_content('Signed in successfully')
     end
     it 'can login with email' do
       visit 'users/sign_in'
       fill_in 'Login', with: 'per2@e.com'
-      fill_in 'Password', with: '123123'
+      fill_in 'user_password', with: '123123'
       click_on 'Log in'
       expect(page).to have_content('Signed in successfully')
     end
@@ -61,7 +61,7 @@ RSpec.feature 'Users', type: :feature do
     it '#show' do
       visit 'users/sign_in'
       fill_in 'Login', with: 'per2'
-      fill_in 'Password', with: '123123'
+      fill_in 'user_password', with: '123123'
       click_on 'Log in'
       visit user_path(User.find_by_username('per2'))
       expect(page).to have_content('All Groups')

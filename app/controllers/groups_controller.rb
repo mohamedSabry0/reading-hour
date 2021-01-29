@@ -7,7 +7,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @time_blocks = @group.time_blocks.order('created_at DESC')
+    @time_blocks = @group.time_blocks.includes(:author).order('created_at DESC')
   end
 
   def new
