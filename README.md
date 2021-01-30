@@ -4,6 +4,7 @@
 
 - [Deployment](#Deployment)
 - [User Scenarios](#user-scenarios)
+- [Presentation](#presentation)
 - [Built With](#built-with)
 - [Example applications](#example-applications)
 - [Getting started](#getting-started)
@@ -13,6 +14,7 @@
 	- [Run Tests](#run-tests)
 - [Author](#author)
 - [Contributing](#contributing)
+- [Acknolodgement](#Acknowledgments)
 - [Show Your Support](#show-your-support)
 - [License](#license)
 ## Deployment
@@ -52,6 +54,9 @@ Following MVP version of the app, these are the basic user scenarios:
     - Colors
     - typographies: font face, size and weight (use similar ones to the design)
     - layout: composition and space between elements
+
+## Presentation
+[presentation video](https://www.loom.com/share/9218a6ae785b4874936e6ea254b5b307)
 ## Built With
 
 Ruby v2.7.2  
