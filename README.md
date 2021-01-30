@@ -13,7 +13,7 @@
 	- [Usage](#usage)
 	- [Run Tests](#run-tests)
 - [Author](#author)
-- [Contributing](#contributing)
+- [Contributing](#-contributing)
 - [Acknolodgement](#Acknowledgments)
 - [Show Your Support](#show-your-support)
 - [License](#license)
@@ -97,6 +97,10 @@ Start server with:
 Open http://localhost:3000/ in your browser.
 
 ### Run tests
+The tests are included in github actions to be ran each push. Here is the link for it:
+[tests workflow](https://github.com/mohamedSabry0/reading-hour/actions?query=workflow%3A%22Rails+tests%22)
+
+if you want to run them locally you can run the following command:
 ```
     rspec --format doc
 ```
@@ -125,7 +129,7 @@ then, you will need to change the password in `config/database.yml` on line 62 t
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](github.com/mohamedSabry0/reading-hour/issues).
 
 ## Show your support
 
