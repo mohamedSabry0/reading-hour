@@ -1,7 +1,7 @@
-<div class='d-flex flex-column'>
-  <h1 class='bg-gradient-blue white p-2 text-center'>Time Blocks</h1>
+<div class='d-flex flex-column pr-2 pl-2'>
+  <h2 class='bg-gradient-blue white text-center mr-n2 ml-n2'>Time Blocks</h2>
   <div class='d-flex justify-content-between w-100'>
-    <strong>Total Amount:</strong><strong><%= @time_blocks.sum("amount")%>H</strong>
+    <h4>Total Amount:</h4><h4><%= @time_blocks.sum("amount")%>H</h4>
   </div>
 
   <% @time_blocks.each do |block| %>

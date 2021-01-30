@@ -1,7 +1,7 @@
 module ApplicationHelper
   def alert_notice
     if alert || notice
-      'big-font'
+      'med-font'
     else
       'd-none'
     end

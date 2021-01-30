@@ -82,8 +82,8 @@ bundle install
 Setup database with:
 
 ```
-   rails db:create
-   rails db:migrate
+rails db:create
+rails db:migrate
 ```
 
 ### Usage
@@ -91,22 +91,22 @@ Setup database with:
 Start server with:
 
 ```
-    rails server
+rails server
 ```
 
 Open http://localhost:3000/ in your browser.
 
 ### Run tests
-The tests are included in github actions to be ran each push. Here is the link for it:
-[tests workflow](https://github.com/mohamedSabry0/reading-hour/actions?query=workflow%3A%22Rails+tests%22)
+The tests are included in github actions to be executed each push. Here is the link for it:
+[tests sorted by most recent execution](https://github.com/mohamedSabry0/reading-hour/actions?query=workflow%3A%22Rails+tests%22)
 
 if you want to run them locally you can run the following command:
 ```
-    rspec --format doc
+rspec --format doc
 ```
 or if you want it to open an instance of the browser you can use the following instead:
 ```
-    GUI=true rpsec --format doc
+GUI=true rpsec --format doc
 ```
 if you get `password authentication failed for user "postgres"`
 then, you will need to change the password in `config/database.yml` on line 62 to your own `postgres` user's password
@@ -121,7 +121,6 @@ then, you will need to change the password in `config/database.yml` on line 62 t
 ## Acknowledgments
 - [autocomplete select from list](https://medium.com/@sherzelsmith/add-a-filtering-multiple-tag-system-with-autocomplete-to-your-rails-model-in-rails-5-1bf88cd53e9)
 - [the design I used as a guide](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) - [the Designer](https://www.behance.net/gregoirevella)
-- https://stackoverflow.com/a/30782337/6010915
 - https://andycroll.com/ruby/use-simplecov/
 
 
@@ -129,7 +128,7 @@ then, you will need to change the password in `config/database.yml` on line 62 t
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](github.com/mohamedSabry0/reading-hour/issues).
+Feel free to check the [issues page](https://github.com/mohamedSabry0/reading-hour/issues).
 
 ## Show your support
 

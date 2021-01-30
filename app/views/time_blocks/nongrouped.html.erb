@@ -1,7 +1,7 @@
-<div class='d-flex flex-column'>
-  <h1 class='bg-gradient-blue white p-2 text-center'>Non-Grouped Time Blocks</h1>
+<div class='d-flex flex-column pr-2 pl-2'>
+  <h1 class='bg-gradient-blue white text-center mr-n2 ml-n2'>Non-Grouped Time Blocks</h1>
   <div class='d-flex justify-content-between w-100'>
-    <strong>Total Amount:</strong><strong><%= TimeBlock.non_grouped.sum("amount")%>H</strong>
+    <h4>Total Amount:</h4><h4><%= TimeBlock.non_grouped.sum("amount")%>H</h4>
   </div>
 
   <% TimeBlock.non_grouped.each do |block| %>
