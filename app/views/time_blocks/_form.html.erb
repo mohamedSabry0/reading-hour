@@ -2,7 +2,7 @@
   <%= f.error_notification %>
   
   <%= f.input :name %> 
-  <%= f.input :amount %>
+  <%= f.input :amount, placeholder:'in hours' %>
   <%= f.input :group_ids, as: :select, collection: Group.all, label_method: :name, input_html: {multiple: true} %>
 
   <%= f.submit 'Create/Update Time Block'%>
