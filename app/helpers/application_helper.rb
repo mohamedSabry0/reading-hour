@@ -8,7 +8,8 @@ module ApplicationHelper
   end
 
   def background_style
-    return if current_user == nil
+    return if current_user.nil?
+
     if current_page?(user_path(current_user)) ||
        (current_page?(controller: 'groups') &&
        current_page?(action: 'index'))
