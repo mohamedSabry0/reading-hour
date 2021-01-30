@@ -16,6 +16,6 @@
   </p>
 
 <%end%>
-<%= link_to 'Destroy', @time_block, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Edit', edit_time_block_path(@time_block) %> |
-<%= link_to 'Back', time_blocks_path %>
+<%= link_to 'Destroy', @time_block, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn p-1' %>
+<%= link_to 'Edit', edit_time_block_path(@time_block), class:'btn p-1' %>
+<%= link_to 'Back', time_blocks_path, class:'btn p-1' %>

@@ -111,8 +111,10 @@ then, you will need to change the password in `config/database.yml` on line 62 t
 
 ## Acknowledgments
 - [autocomplete select from list](https://medium.com/@sherzelsmith/add-a-filtering-multiple-tag-system-with-autocomplete-to-your-rails-model-in-rails-5-1bf88cd53e9)
+- [the design I used as a guide](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) - [the Designer](https://www.behance.net/gregoirevella)
 - https://stackoverflow.com/a/30782337/6010915
 - https://andycroll.com/ruby/use-simplecov/
+
 
 ## 🤝 Contributing
 

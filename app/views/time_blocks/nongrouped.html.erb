@@ -1,30 +1,21 @@
-<h1>Time Blocks</h1>
+<div class='d-flex flex-column'>
+  <h1 class='bg-gradient-blue white p-2 text-center'>Non-Grouped Time Blocks</h1>
+  <div class='d-flex justify-content-between w-100'>
+    <strong>Total Amount:</strong><strong><%= TimeBlock.non_grouped.sum("amount")%>H</strong>
+  </div>
 
-<h3>time sum of all blocks: <span><%= TimeBlock.non_grouped.sum("amount")%></span></h3>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Amount</th>
-      <th>Time of Creation</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% TimeBlock.non_grouped.each do |time_block| %>
-      <tr>
-        <td><%= time_block.name %></td>
-        <td><%= time_block.amount %></td>
-        <td><%= time_block.created_at %></td>
-        <td><%= link_to 'Show', time_block %></td>
-        <td><%= link_to 'Edit', edit_time_block_path(time_block) %></td>
-        <td><%= link_to 'Destroy', time_block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <% TimeBlock.non_grouped.each do |block| %>
+    <%= link_to block, class:'d-flex justify-content-between list-item mb-1 pt-1' do%>
+      <div class='d-flex flex-column justify-content-between'>
+        <div class='d-flex'>
+          <div><%= main_group_icon(block) %></div>
+          <div><%= block.name %></div>
+        </div>
+        <div class="grey"><%= block.created_at.strftime("%e %b %Y") %></div>
+      </div>
+      <div><%= block.amount %>H</div>
     <% end %>
-  </tbody>
-</table>
+  <% end %>
 
-<br>
-
-<%= link_to 'New Time Block', new_time_block_path %>
+  <%= link_to 'New Time Block', new_time_block_path, class:'btn p-1' %>
+</div>

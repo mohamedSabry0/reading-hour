@@ -36,6 +36,10 @@ abbr {
   background: linear-gradient(45deg, #3678c2, #143562);
 }
 
+.bg-white {
+  background-color: white;
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -64,7 +68,7 @@ abbr {
   }
 }
 
-.container div .w-100 {
+.w-100 {
   width: 100%;
 }
 
@@ -81,6 +85,10 @@ abbr {
 .big-font {
   font-size: 3rem;
   line-height: normal;
+}
+
+.med-font {
+  font-size: 2rem;
 }
 
 a.btn {

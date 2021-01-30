@@ -1,5 +1,5 @@
 <div class='d-flex flex-column'>
-  <h1 class='bg-gradient-blue white p-2'>Time Blocks</h1>
+  <h1 class='bg-gradient-blue white p-2 text-center'>Time Blocks</h1>
   <div class='d-flex justify-content-between w-100'>
     <strong>Total Amount:</strong><strong><%= @time_blocks.sum("amount")%>H</strong>
   </div>
@@ -17,5 +17,5 @@
     <% end %>
   <% end %>
 
-  <%= link_to 'New Time Block', new_time_block_path, class:'btn' %>
+  <%= link_to 'New Time Block', new_time_block_path, class:'btn p-1' %>
 </div>
