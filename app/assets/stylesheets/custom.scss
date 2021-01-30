@@ -112,12 +112,14 @@ a.btn {
 .list-item {
   font-size: larger;
   border-top: rgba(173, 173, 173, 0.616) 1px solid;
+
   &:hover,
   &:visited {
     color: black;
     background: none;
     text-decoration: none;
   }
+
   .grey {
     color: dimgray;
   }

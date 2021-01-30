@@ -19,14 +19,12 @@ RSpec.feature 'ReadingHours', type: :feature do
     click_on 'Create/Update Time Block'
     expect(page).to have_content('Time block was successfully created.')
     click_on 'Edit'
-    fill_in 'Name', with: 'test2'
-    click_on 'Create/Update Time Block'
-    expect(page).to have_content('Time block was successfully updated.')
-    click_on 'Edit'
     fill_in 'Name', with: ''
     click_on 'Create/Update Time Block'
     expect(page).to have_content("Name can't be blank and Name is too short (minimum is 3 characters)")
-    visit time_blocks_path
+    fill_in 'Name', with: 'test2'
+    click_on 'Create/Update Time Block'
+    expect(page).to have_content('Time block was successfully updated.')
     page.accept_confirm do
       click_on 'Destroy'
     end

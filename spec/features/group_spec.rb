@@ -23,9 +23,9 @@ RSpec.feature 'Groups', type: :feature do
         click_on 'New Group'
         fill_in 'Name', with: 'test1'
         click_on 'Create/Update Group'
-        visit groups_path
       end
       it '#index' do
+        visit groups_path
         expect(page).to have_content('test1')
       end
       it '#edit' do
