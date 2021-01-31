@@ -20,8 +20,9 @@ abbr {
 
 #notice,
 #alert {
+  padding: 0.35rem;
   margin: 0;
-  border: 3px solid darkred;
+  background-color: #ffb5b5;
 }
 
 .d-none {
