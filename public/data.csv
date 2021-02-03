@@ -1,0 +1,3 @@
+id,username,created_at,updated_at,email,encrypted_password,reset_password_token,reset_password_sent_at,remember_created_at,sign_in_count,current_sign_in_at,last_sign_in_at,current_sign_in_ip,last_sign_in_ip
+1,user2,2020-12-21 22:54:46 UTC,2020-12-22 00:00:11 UTC,2@example.com,$2a$12$149auzitd9WAKtKJBEZQW.7pY4vgvo6e3DAYV9KwQyyVXl3BD4tli,,,2020-12-22 00:00:11 UTC,0,,,,
+2,usr1,2021-01-07 19:10:01 UTC,2021-01-07 19:10:01 UTC,usr1@ex.com,$2a$12$GxZ6C5bQ1DYhCrWsT3RtNORM4PAFXMo6DqJpkHbtzqUCT6Wej52cC,,,,0,,,,

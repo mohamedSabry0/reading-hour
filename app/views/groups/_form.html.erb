@@ -1,0 +1,6 @@
+<%= simple_form_for @group do |form| %>
+    <%= form.error_notification %>
+    <%= form.input :name %>
+    <%= form.input :icon %>
+    <%= form.submit 'Create/Update Group' %>
+<% end %>

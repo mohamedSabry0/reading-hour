@@ -1,0 +1,19 @@
+  <h2 class='bg-gradient-blue white text-center mr-n2 ml-n2 w-100'>Time Blocks</h2>
+  <div class='d-flex justify-content-between w-100'>
+    <h4>Total Amount:</h4><h4><%= @time_blocks.sum("amount")%>H</h4>
+  </div>
+
+  <% @time_blocks.each do |block| %>
+    <%= link_to block, class:'d-flex justify-content-between list-item mb-1 pt-1' do%>
+      <div class='d-flex flex-column justify-content-between'>
+        <div class='d-flex'>
+          <div><%= main_group_icon(block) %></div>
+          <div><%= block.name %></div>
+        </div>
+        <div class="date"><%= block.created_at.strftime("%e %b %Y") %></div>
+      </div>
+      <div><%= block.amount %>H</div>
+    <% end %>
+  <% end %>
+
+  <%= link_to 'New Time Block', new_time_block_path, class:'btn-primary p-1' %>

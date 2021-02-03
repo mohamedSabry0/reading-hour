@@ -1,0 +1,24 @@
+
+  <h2 class='bg-gradient-blue white p-2 text-center mr-n2 ml-n2 w-100'>Group Time Blocks</h2>
+  <strong class='m-2'>Name: <%= @group.name %></strong>
+  <strong class='m-2'>Icon: <%= group_icon(@group) %></strong>  
+  <div class='d-flex justify-content-between w-100'>
+      <h4>Total Amount:</h4><h4><%= @time_blocks.sum("amount")%>H</h4>
+  </div>
+  <% @time_blocks.each do |block| %>
+    <%= link_to block, class:'d-flex justify-content-between list-item mb-1 pt-1' do%>
+      <div class='d-flex flex-column justify-content-between'>
+        <div class='d-flex justify-content-between flex-wrap'>
+          <div><%= block.name %></div>
+          <div><%= block.author.username %></div>
+        </div>
+        <div class="date"><%= block.created_at.strftime("%e %b %Y") %></div>
+      </div>
+      <div><%= block.amount %>H</div>
+    <% end %>
+  <% end %>
+
+  <%= link_to 'Destroy Group', @group, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn mb-2' %>
+  <%= link_to 'Edit Group', edit_group_path(@group), class:'btn mb-2' %>
+  <%= link_to 'Back', groups_path, class:'btn mb-2' %>
+
