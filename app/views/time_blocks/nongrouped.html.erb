@@ -11,11 +11,11 @@
           <div><%= main_group_icon(block) %></div>
           <div><%= block.name %></div>
         </div>
-        <div class="grey"><%= block.created_at.strftime("%e %b %Y") %></div>
+        <div class="date"><%= block.created_at.strftime("%e %b %Y") %></div>
       </div>
       <div><%= block.amount %>H</div>
     <% end %>
   <% end %>
 
-  <%= link_to 'New Time Block', new_time_block_path, class:'btn p-1' %>
+  <%= link_to 'New Time Block', new_time_block_path, class:'btn-primary p-1' %>
 </div>

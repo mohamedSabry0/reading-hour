@@ -1,16 +1,16 @@
 <div class='d-flex flex-column p-2'>
-  <strong class='med-font m-2'>Name: <%= @time_block.name %></strong>  
-  <strong class='med-font m-2'>Amount: <%= @time_block.amount %></strong>
-  <strong class='med-font m-2'>Groups:</strong>
+  <strong class='m-2'>Name: <%= @time_block.name %></strong>  
+  <strong class='m-2'>Amount: <%= @time_block.amount %></strong>
+  <strong class='m-2'>Groups:</strong>
   <% @groups.each do |group|%>
     <%= link_to group, class:'list-item d-flex justify-content-between p-2' do%>
       <div class='p-2'><%= group_icon(group) %></div>
-      <div class='p-2 med-font'><%= group.name %></div>
-      <div class="p-2"><%= group.created_at.strftime("%e %b %Y") %></div>
+      <div class='p-2'><%= group.name %></div>
+      <div class="p-2 date"><%= group.created_at.strftime("%e %b %Y") %></div>
     <% end %>
   <% end %>
   
   <%= link_to 'Destroy Time Block', @time_block, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn p-1' %>
   <%= link_to 'Edit Time Block', edit_time_block_path(@time_block), class:'btn p-1' %>
-  <%= link_to 'Back Time Block', time_blocks_path, class:'btn p-1' %>
+  <%= link_to 'Back', time_blocks_path, class:'btn p-1' %>
 </div>

@@ -4,19 +4,17 @@
     <title>ReadingHour</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body class='m-0'>
+  <body class='d-flex flex-column justify-content-center align-items-center <%= background_style %>'>
     <p id="alert" class=<%=alert_notice%> ><%= alert %></p>
     <p id="notice" class=<%=alert_notice%> ><%= notice %></p>
-    <div class="full-height p-0 container-fluid <%= background_style %>">
-      <%= yield %>
-      <div class='d-flex w-100 text-center'>
-        <%= logged_in_nav %>
-      </div>
-    </div>
+    <%= logged_in_nav %>
+    <%= yield %>
+      
   </body>
 </html>

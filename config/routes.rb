@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root  to: 'users#show'
   resources :groups
   resources :time_blocks
-  devise_for :users, :controllers => {:sessions => "devise/sessions"}
+  devise_for :users, :controllers => {:sessions => "devise/sessions", registrations: 'registrations'}
   
   resources :users, only: [:show]
 

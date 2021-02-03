@@ -1,7 +1,7 @@
 module ApplicationHelper
   def alert_notice
     if alert || notice
-      'med-font'
+      nil
     else
       'd-none'
     end
@@ -11,11 +11,12 @@ module ApplicationHelper
     return if current_user.nil?
 
     if current_page?(user_path(current_user)) ||
+       current_page?('/') ||
        (current_page?(controller: 'groups') &&
        current_page?(action: 'index'))
       'bg-gradient-blue'
     else
-      'bg-white'
+      'bg-light-grey'
     end
   end
 
@@ -26,9 +27,6 @@ module ApplicationHelper
   def logged_in_nav
     return unless current_user
 
-    link_to('Log Out', destroy_user_session_path, method: :delete,\
-                                                  class: "btn#{bg(background_style)} med-font mb-1 p-2 col")\
-      .concat(' ')
-      .concat(link_to('Profile', user_path(current_user), class: "btn#{bg(background_style)} med-font mb-1 p-2 col"))
+    link_to('Profile', user_path(current_user), class: "btn#{bg(background_style)} mb-1 p-2")
   end
 end

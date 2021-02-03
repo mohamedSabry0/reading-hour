@@ -5,10 +5,10 @@ RSpec.feature 'ReadingHours', type: :feature do
   let(:picture) { 'app/assets/images/iconfinder_Development_5355692.png' }
   before do
     visit 'users/sign_up'
-    fill_in 'Username', with: 'per2'
-    fill_in 'Email', with: 'per2@e.com'
+    fill_in 'user_username', with: 'per2'
+    fill_in 'user_email', with: 'per2@e.com'
     fill_in 'user_password', with: '123123'
-    fill_in 'Password confirmation', with: '123123'
+    fill_in 'user_password_confirmation', with: '123123'
     click_on 'Sign up'
   end
   scenario 'creating, failing to edit, editing, and deleting' do
@@ -30,6 +30,27 @@ RSpec.feature 'ReadingHours', type: :feature do
     end
     expect(page).to have_content('Time block was successfully destroyed.')
   end
+  describe 'with group no icon' do
+    before do
+      visit 'groups/new'
+      fill_in 'Name', with: 'testgroup2'
+      click_button 'Create/Update Group'
+    end
+    it '#create' do
+      visit time_blocks_path
+      click_on 'New Time Block'
+      fill_in 'Name', with: 'test3'
+      fill_in 'Amount', with: 1
+      find('ul.chosen-choices').click
+      find('li.highlighted').click
+      click_on 'Create/Update Time Block'
+
+      expect(page).to have_content('Time block was successfully created')
+      visit time_blocks_path
+      expect(page).to have_selector('.icon')
+    end
+  end
+
   describe 'with a group and icon' do
     before do
       visit 'groups/new'

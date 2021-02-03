@@ -1,5 +1,4 @@
-<div class='d-flex flex-column pr-2 pl-2'>
-  <h2 class='bg-gradient-blue white text-center mr-n2 ml-n2'>Time Blocks</h2>
+  <h2 class='bg-gradient-blue white text-center mr-n2 ml-n2 w-100'>Time Blocks</h2>
   <div class='d-flex justify-content-between w-100'>
     <h4>Total Amount:</h4><h4><%= @time_blocks.sum("amount")%>H</h4>
   </div>
@@ -11,11 +10,10 @@
           <div><%= main_group_icon(block) %></div>
           <div><%= block.name %></div>
         </div>
-        <div class="grey"><%= block.created_at.strftime("%e %b %Y") %></div>
+        <div class="date"><%= block.created_at.strftime("%e %b %Y") %></div>
       </div>
       <div><%= block.amount %>H</div>
     <% end %>
   <% end %>
 
-  <%= link_to 'New Time Block', new_time_block_path, class:'btn p-1' %>
-</div>
+  <%= link_to 'New Time Block', new_time_block_path, class:'btn-primary p-1' %>

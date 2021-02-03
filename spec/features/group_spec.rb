@@ -4,10 +4,10 @@ RSpec.feature 'Groups', type: :feature do
   let(:picture) { 'app/assets/images/iconfinder_Development_5355692.png' }
   before do
     visit 'users/sign_up'
-    fill_in 'Username', with: 'per3'
-    fill_in 'Email', with: 'per3@e.com'
+    fill_in 'user_username', with: 'per3'
+    fill_in 'user_email', with: 'per3@e.com'
     fill_in 'user_password', with: '123123'
-    fill_in 'Password confirmation', with: '123123'
+    fill_in 'user_password_confirmation', with: '123123'
     click_on 'Sign up'
     visit groups_path
   end

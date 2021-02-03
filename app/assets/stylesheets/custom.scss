@@ -1,13 +1,40 @@
 @import "bootstrap";
 
+body {
+  font-size: 30px;
+}
+
+.simple_form {
+  min-width: 80%;
+}
+
+.form-check {
+  font-size: 0.8rem;
+  color: rgb(93, 93, 93);
+}
+
+.field {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.8rem 0;
+}
+
+.actions {
+  margin: 0.8rem 0;
+  display: flex;
+  justify-content: center;
+}
+
 .full-height {
   height: 100vh;
 }
 
 .btn-primary {
   color: white;
-  background-color: #006adb;
-  border-color: #006adb;
+  background-color: #3778c2;
+  border: none;
+  border-radius: 10px;
 }
 
 abbr {
@@ -22,7 +49,15 @@ abbr {
 #alert {
   padding: 0.35rem;
   margin: 0;
+}
+
+#alert {
   background-color: #ffb5b5;
+}
+
+#notice {
+  color: white;
+  background-color: #60b52393;
 }
 
 .d-none {
@@ -41,8 +76,8 @@ abbr {
   background: linear-gradient(45deg, #3678c2, #143562);
 }
 
-.bg-white {
-  background-color: white;
+.bg-light-grey {
+  background-color: #f1f1f1;
 }
 
 .container {
@@ -87,18 +122,22 @@ abbr {
   }
 }
 
-.big-font {
-  font-size: 3rem;
-  line-height: normal;
+.btn {
+  margin: 0.3rem 0;
+  font-size: 1.2rem;
 }
 
-.med-font {
-  font-size: 2rem;
+.profile-btn {
+  padding: 0.35rem;
+  margin: 0.5rem 0;
+  font-size: 2.25rem;
 }
 
 a.btn {
   color: black;
-  border-color: black;
+  border-color: rgba(153, 153, 153, 0.794);
+  margin: 0.3rem 0;
+  font-size: 1.2rem;
 
   &-light,
   &-light:hover,
@@ -122,18 +161,23 @@ a.btn {
   height: 4rem;
 }
 
-.list-item {
-  font-size: larger;
-  border-top: rgba(173, 173, 173, 0.616) 1px solid;
+.list-item,
+.list-item-light {
+  background-color: white;
+  width: 90%;
+  margin: 0.5rem 0;
+  font-size: 2rem;
 
+  .date {
+    font-size: 1rem;
+    color: dimgray;
+  }
+}
+
+.list-item {
   &:hover,
   &:visited {
     color: black;
-    background: none;
     text-decoration: none;
-  }
-
-  .grey {
-    color: dimgray;
   }
 }
