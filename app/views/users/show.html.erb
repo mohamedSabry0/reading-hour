@@ -1,0 +1,13 @@
+<div class="text-center white">
+  <div>
+    <p>Hello <%= @user.username %></p>
+  </div>
+  <div class='d-flex flex-column text-center'>
+    <%= link_to 'All Groups', groups_path, class:'btn-light profile-btn'%>
+    <%= link_to 'non-grouped spans', nongrouped_path, class:'btn-light profile-btn'%>
+    <%= link_to 'My Reading spans', time_blocks_path, class:'btn-light profile-btn'%>
+    <%= link_to 'Edit Profile', edit_user_registration_path(@user), class:'btn-light profile-btn'%>
+    <%= link_to 'Log Out', destroy_user_session_path, method: :delete,\
+                                                  class: "btn#{bg(background_style)} mb-1 p-2"%>
+  </div>
+</div>

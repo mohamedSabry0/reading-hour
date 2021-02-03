@@ -1,0 +1,10 @@
+
+<h1 class='white'>Groups</h1>
+  <% @groups.each do |group| %>
+      <%= link_to group, class:'list-item-light d-flex justify-content-between p-2' do%>
+        <div class='p-2'><%= group_icon(group) %></div>
+        <div class='p-2 white'><%= group.name %></div>
+        <div class="p-2 white date"><%= group.created_at.strftime("%e %b %Y") %></div>
+      <% end %>
+  <% end %>
+<%= link_to 'New Group', new_group_path, class:'btn-light p-2 mt-2 mb-2' %>

@@ -1,0 +1,18 @@
+<%= simple_form_for @time_block do |f| %>
+  <%= f.error_notification %>
+  
+  <%= f.input :name %> 
+  <%= f.input :amount, placeholder:'in hours' %>
+  <%= f.input :group_ids, as: :select, collection: Group.all, label_method: :name, input_html: {multiple: true} %>
+
+  <%= f.submit 'Create/Update Time Block'%>
+  
+<% end %>
+<script>
+  $(window).load( function(){
+    $('#time_block_group_ids').chosen({
+      allow_single_deselect:true,
+      width: '100%'
+    })
+  });
+</script>
