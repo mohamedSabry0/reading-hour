@@ -123,7 +123,7 @@ then, you will need to change the password in `config/database.yml` on line 62 t
 - [the design I used as a guide](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) - [the Designer](https://www.behance.net/gregoirevella)
 - https://andycroll.com/ruby/use-simplecov/
 
-
+- [social preview image](docs/social_preview.png) made by [Zlatko Najdenovski](https://www.flaticon.com/authors/zlatko-najdenovski) from [flaticon.com](http://www.flaticon.com/)
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
