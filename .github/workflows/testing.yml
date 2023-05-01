@@ -1,5 +1,5 @@
 env:
-  RUBY_VERSION: 2.7
+  RUBY_VERSION: 2.7.2
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: postgres
   POSTGRES_DB: postgres
@@ -14,7 +14,7 @@ jobs:
       postgres:
         image: postgres:latest
         ports:
-        - 5432:5432
+          - 5432:5432
         env:
           POSTGRES_USER: ${{ env.POSTGRES_USER }}
           POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
